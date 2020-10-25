@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Bảng tin cứu trợ"
+            android:text="Thông tin cứu trợ"
             android:textColor="#000"
             android:textSize="25sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -100,10 +100,8 @@
                     android:id="@+id/img_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
                     android:src="@drawable/ic_location"
-                    app:layout_constraintStart_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -254,11 +252,25 @@
                         app:layout_constraintStart_toStartOf="@+id/txt_name"
                         app:layout_constraintTop_toBottomOf="@+id/txt_name" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/custom_ll_aid_news"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_listHelper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </View>
         </LinearLayout>
 
         <com.github.clans.fab.FloatingActionButton
@@ -271,5 +283,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
