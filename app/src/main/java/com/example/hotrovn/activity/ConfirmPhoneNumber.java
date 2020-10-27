@@ -1,14 +1,14 @@
 package com.example.hotrovn.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.hotrovn.R;
+import com.example.hotrovn.activity.helper.AidNewsHelperActivity;
+import com.example.hotrovn.utilities.BaseActivity;
 
-public class ConfirmPhoneNumber extends AppCompatActivity {
+public class ConfirmPhoneNumber extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,6 @@ public class ConfirmPhoneNumber extends AppCompatActivity {
     }
 
     public void moveAidNews(View v) {
-        Intent intent = new Intent(this, AidNews.class);
-        startActivity(intent);
+        handingMoveScreen_AidNews(this, AidNews.class, AidNewsHelperActivity.class);
     }
 }

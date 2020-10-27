@@ -2,14 +2,18 @@ package com.example.hotrovn.activity.needRelief;
 
 import androidx.databinding.DataBindingUtil;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
 
-import com.example.hotrovn.baseActivity.BaseActivity;
+import com.example.hotrovn.activity.AidNews;
+import com.example.hotrovn.utilities.BaseActivity;
 import com.example.hotrovn.R;
 import com.example.hotrovn.databinding.ActivityCreateAidNewsBinding;
 
-public class CreateAidNewsActivity extends BaseActivity   {
+public class CreateAidNewsActivity extends BaseActivity {
     ActivityCreateAidNewsBinding binding;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,11 @@ public class CreateAidNewsActivity extends BaseActivity   {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_create_aid_news);
 
+        dialog = new Dialog(this);
+        showDialog_CreateAidNews(dialog, R.layout.dialogs_create_aid_news, R.drawable.custom_ll_aid_news, R.id.bt_save, this, AidNews.class);
     }
 
+    public void showDialog(View v) {
+        dialog.show();
+    }
 }

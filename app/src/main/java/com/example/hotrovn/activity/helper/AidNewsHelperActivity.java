@@ -1,11 +1,15 @@
 package com.example.hotrovn.activity.helper;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.hotrovn.activity.helper.fragments.InformationFragments;
 import com.example.hotrovn.activity.helper.fragments.MapsFragments;
-import com.example.hotrovn.baseActivity.BaseActivity;
+import com.example.hotrovn.utilities.BaseActivity;
 import com.example.hotrovn.R;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class AidNewsHelperActivity extends BaseActivity {
 
@@ -13,16 +17,35 @@ public class AidNewsHelperActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aid_news_helper);
-//        toast("ok");
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frm_informationAid, new MapsFragments()).commit();
+        moveFragments_AidNews(R.id.frm_informationAid, new MapsFragments());
     }
 
-    public void moveMaps() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frm_informationAid, new MapsFragments()).commit();
+    public void moveMaps(View v) {
+        moveFragments_AidNews(R.id.frm_informationAid, new MapsFragments());
     }
 
-    public void moveInformation() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frm_informationAid, new InformationFragments()).commit();
+    public void moveInformation(View v) {
+        moveFragments_AidNews(R.id.frm_informationAid, new InformationFragments());
+    }
+
+    public void search(View v) {
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
+        showBottomSheetDialog_AidNewsHelper(bottomSheetDialog,R.layout.dialogs_bottomsheet_aid_news_helper, R.id.bottomSheetContainer, R.id.img_close);
+
+//        View bottomSheetView = LayoutInflater.from(getApplicationContext())
+//                .inflate(R.layout.dialogs_bottomsheet_aid_news_helper,
+//                        (ViewGroup) findViewById(R.id.bottomSheetContainer)
+//                );
+//
+//        bottomSheetView.findViewById(R.id.img_close).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                bottomSheetDialog.dismiss();
+//            }
+//        });
+//
+//        bottomSheetDialog.setContentView(bottomSheetView);
+//        bottomSheetDialog.show();
     }
 }

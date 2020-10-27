@@ -10,8 +10,9 @@ import android.view.View;
 import com.example.hotrovn.activity.needRelief.CreateAidNewsActivity;
 import com.example.hotrovn.R;
 import com.example.hotrovn.databinding.ActivityAidNewsBinding;
+import com.example.hotrovn.utilities.BaseActivity;
 
-public class AidNews extends AppCompatActivity {
+public class AidNews extends BaseActivity {
 
     ActivityAidNewsBinding binding;
 
@@ -24,7 +25,6 @@ public class AidNews extends AppCompatActivity {
     }
 
     public void moveCreateAidNews(View v) {
-        Intent intent = new Intent(this, CreateAidNewsActivity.class);
-        startActivity(intent);
+        moveScreen_All(this, CreateAidNewsActivity.class);
     }
 }
