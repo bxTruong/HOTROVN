@@ -32,20 +32,5 @@ public class AidNewsHelperActivity extends BaseActivity {
     public void search(View v) {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
         showBottomSheetDialog_AidNewsHelper(bottomSheetDialog,R.layout.dialogs_bottomsheet_aid_news_helper, R.id.bottomSheetContainer, R.id.img_close);
-
-//        View bottomSheetView = LayoutInflater.from(getApplicationContext())
-//                .inflate(R.layout.dialogs_bottomsheet_aid_news_helper,
-//                        (ViewGroup) findViewById(R.id.bottomSheetContainer)
-//                );
-//
-//        bottomSheetView.findViewById(R.id.img_close).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                bottomSheetDialog.dismiss();
-//            }
-//        });
-//
-//        bottomSheetDialog.setContentView(bottomSheetView);
-//        bottomSheetDialog.show();
     }
 }

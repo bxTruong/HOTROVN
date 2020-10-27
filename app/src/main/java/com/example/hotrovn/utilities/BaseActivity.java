@@ -12,12 +12,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hotrovn.R;
 import com.example.hotrovn.activity.AidNews;
 import com.example.hotrovn.activity.ConfirmPhoneNumber;
 import com.example.hotrovn.activity.helper.AidNewsHelperActivity;
 import com.example.hotrovn.activity.helper.fragments.MapsFragments;
+import com.example.hotrovn.utilities.adapter.AidNewsAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class BaseActivity extends AppCompatActivity {
@@ -28,6 +31,12 @@ public class BaseActivity extends AppCompatActivity {
     public void moveScreen_All(Context context, Class classs) {
         Intent intent = new Intent(context, classs);
         startActivity(intent);
+    }
+
+    public void initRecyclerView(Context context, RecyclerView recyclerView, AidNewsAdapter adapter) {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
     }
 
     public void moveScreen_Home(Context context, Class classs, Integer a) {
@@ -71,8 +80,7 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
-    public void showBottomSheetDialog_AidNewsHelper(final BottomSheetDialog bottomSheetDialog, int dialog, int idDialog, int close)
-    {
+    public void showBottomSheetDialog_AidNewsHelper(final BottomSheetDialog bottomSheetDialog, int dialog, int idDialog, int close) {
         View bottomSheetView = LayoutInflater.from(getApplicationContext())
                 .inflate(dialog,
                         (ViewGroup) findViewById(idDialog)
