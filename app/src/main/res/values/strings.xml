@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">HOTROVN</string>
+
+    <string-array name="provincial">
+        <item>Hà Nội</item>
+        <item>Hà Đông</item>
+        <item>Hà Tây</item>
+        <item>Hà Nam</item>
+        <item>Hà Bắc</item>
+    </string-array>
 </resources>

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Activity.AidNews">
+        tools:context=".activity.AidNews">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"
@@ -78,11 +78,13 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:background="#00000000"
+            android:onClick="moveCreateAidNews"
             android:src="@drawable/ic_plusr_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="@+id/guideline7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

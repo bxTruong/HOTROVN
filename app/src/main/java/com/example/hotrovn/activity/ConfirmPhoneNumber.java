@@ -1,4 +1,4 @@
-package com.example.hotrovn.Activity;
+package com.example.hotrovn.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,16 +8,16 @@ import android.view.View;
 
 import com.example.hotrovn.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class ConfirmPhoneNumber extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_confirm_phone_number);
     }
 
-    public void moveConfirmPhoneNumber(View v) {
-        Intent intent = new Intent(this, ConfirmPhoneNumber.class);
+    public void moveAidNews(View v) {
+        Intent intent = new Intent(this, AidNews.class);
         startActivity(intent);
     }
 }

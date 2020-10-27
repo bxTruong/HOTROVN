@@ -13,12 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.NeedRelief.AidInformation"></activity>
-        <activity android:name=".Activity.AidNews" />
-        <activity android:name=".Activity.ConfirmPhoneNumber" />
-        <activity android:name=".Activity.NeedRelief.CreateAidNewsActivity" />
-        <activity android:name=".Activity.Helper.HelperFirsActivity" />
-        <activity android:name=".Activity.HomeActivity">
+        <activity android:name=".activity.needRelief.AidInformation"></activity>
+        <activity android:name=".activity.AidNews" />
+        <activity android:name=".activity.ConfirmPhoneNumber" />
+        <activity android:name=".activity.needRelief.CreateAidNewsActivity" />
+        <activity android:name=".activity.helper.AidNewsHelperActivity" />
+        <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

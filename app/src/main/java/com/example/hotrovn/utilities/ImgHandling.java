@@ -1,7 +1,6 @@
-package com.example.hotrovn.Utilities;
+package com.example.hotrovn.utilities;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
