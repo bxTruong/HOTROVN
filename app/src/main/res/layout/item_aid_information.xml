@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/img_socialCare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_social_care"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_socialCare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Hộ thiện nguyện giáo hội phật giáo thành phố Quy Nhơn"
+        android:textColor="#000"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_socialCare"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toEndOf="@+id/img_socialCare"
+        app:layout_constraintTop_toTopOf="@+id/img_socialCare" />
+
+    <ImageView
+        android:id="@+id/img_distributed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/distributed"
+        app:layout_constraintStart_toStartOf="@+id/img_socialCare"
+        app:layout_constraintTop_toBottomOf="@+id/img_socialCare" />
+
+    <TextView
+        android:id="@+id/txt_distraibuted"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Áo phao, nước uống, đèn bin, áo mưa, áo quần."
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/txt_socialCare"
+        app:layout_constraintTop_toTopOf="@+id/img_distributed" />
+
+
+    <TextView
+        android:id="@+id/txt_seeDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xem chi tiết"
+        android:textColor="#f8810a"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/txt_distraibuted" />
+
+    <ImageView
+        android:id="@+id/img_calendar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintStart_toStartOf="@+id/img_distributed"
+        app:layout_constraintTop_toBottomOf="@+id/txt_seeDetails" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/img_calendar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_distraibuted"
+        app:layout_constraintTop_toTopOf="@+id/img_calendar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/txt_date1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="25/10/2020"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="  - "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txt_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="18:30"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txt_APM1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" PM"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_voiceCommand"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_voice_command"
+        app:layout_constraintStart_toStartOf="@+id/img_calendar"
+        app:layout_constraintTop_toBottomOf="@+id/img_calendar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/img_voiceCommand"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="@+id/img_voiceCommand">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lê Ngọc Mai"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  |  "
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_name"
+            app:layout_constraintStart_toEndOf="@+id/txt_name"
+            app:layout_constraintTop_toTopOf="@+id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_phoneNuer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0903980553"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_name"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Trưởng nhóm thiện nguyện"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/txt_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
