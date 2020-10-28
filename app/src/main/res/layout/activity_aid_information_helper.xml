@@ -217,7 +217,7 @@
                     app:layout_constraintTop_toTopOf="@+id/txt_name" />
 
                 <TextView
-                    android:id="@+id/txt_phoneNuer"
+                    android:id="@+id/txt_phoneNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0903980553"

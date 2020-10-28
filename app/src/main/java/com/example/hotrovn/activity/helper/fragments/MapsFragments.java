@@ -10,6 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.hotrovn.R;
+import com.example.hotrovn.model.ObjectItem;
+import com.example.hotrovn.utilities.adapter.AidInformation2Adapter;
+
+import java.util.ArrayList;
 
 public class MapsFragments extends Fragment {
     @Nullable
