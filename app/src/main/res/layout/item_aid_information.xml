@@ -57,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
+        android:padding="@dimen/_5sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:text="Xem chi tiết"
         android:textColor="#f8810a"
@@ -66,7 +67,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <ImageView

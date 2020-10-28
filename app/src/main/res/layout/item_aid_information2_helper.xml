@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/custom_ll_aid_news"
     android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@drawable/custom_ll_aid_news"
     android:orientation="vertical"
     android:padding="@dimen/_10sdp">
 
@@ -225,6 +225,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:padding="@dimen/_5sdp"
             android:text="Xem chi tiết"
             android:textColor="#f8810a"
             android:textSize="16dp"

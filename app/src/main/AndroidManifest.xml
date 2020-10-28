@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.helper.fragments.AidBattle"></activity>
+        <activity android:name=".activity.helper.AidBattle"></activity>
         <activity android:name=".activity.helper.AidInformationHelper" />
         <activity android:name=".activity.needRelief.AidInformation" />
         <activity android:name=".activity.AidNews" />

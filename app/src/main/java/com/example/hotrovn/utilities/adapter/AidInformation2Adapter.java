@@ -1,6 +1,7 @@
 package com.example.hotrovn.utilities.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hotrovn.R;
+import com.example.hotrovn.activity.helper.AidInformationHelper;
+import com.example.hotrovn.activity.helper.AidNewsHelperActivity;
 import com.example.hotrovn.model.ObjectItem;
 
 import java.util.ArrayList;
@@ -45,6 +48,14 @@ public class AidInformation2Adapter extends RecyclerView.Adapter<AidInformation2
         holder.mTxtName.setText(objectItems.get(position).getTxtName());
         holder.mTxtPhoneNumber.setText(objectItems.get(position).getTxtPhoneNumber());
         holder.mTxtPosition.setText(objectItems.get(position).getTxtPosition());
+
+        holder.mTxtSeeDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, AidInformationHelper.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

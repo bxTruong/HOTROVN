@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.hotrovn.activity.AidNews;
+import com.example.hotrovn.databinding.ActivityCreateAidNewsBinding;
 import com.example.hotrovn.utilities.BaseActivity;
 import com.example.hotrovn.R;
-import com.example.hotrovn.databinding.ActivityCreateAidNewsBinding;
 
 public class CreateAidNewsActivity extends BaseActivity {
     ActivityCreateAidNewsBinding binding;

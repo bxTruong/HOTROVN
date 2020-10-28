@@ -1,5 +1,7 @@
 package com.example.hotrovn.activity.helper.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +15,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hotrovn.R;
-import com.example.hotrovn.databinding.ActivityAidNewsHelperBinding;
+import com.example.hotrovn.activity.helper.AidBattle;
 import com.example.hotrovn.model.ObjectItem;
 import com.example.hotrovn.utilities.adapter.AidInformation2Adapter;
-import com.example.hotrovn.utilities.adapter.AidInformationAdapter;
 
 import java.util.ArrayList;
 
@@ -44,7 +45,7 @@ public class InformationFragments extends Fragment {
         objectItems.add(new ObjectItem("Quảng Bình", null, "Đông Thanh, Đông Hà, Quảng Bình", "Áo phao, nước uống, đèn bin, áo mưa, áo quần.", "(3)", "Lê Ngọc Mai", "0903980553", "Trưởng nhóm thiện nguyện", "25/10/2020", "18:30"));
         objectItems.add(new ObjectItem("Quảng Bình", null, "Đông Thanh, Đông Hà, Quảng Bình", "Áo phao, nước uống, đèn bin, áo mưa, áo quần.", "(3)", "Lê Ngọc Mai", "0903980553", "Trưởng nhóm thiện nguyện", "25/10/2020", "18:30"));
         objectItems.add(new ObjectItem("Quảng Bình", null, "Đông Thanh, Đông Hà, Quảng Bình", "Áo phao, nước uống, đèn bin, áo mưa, áo quần.", "(3)", "Lê Ngọc Mai", "0903980553", "Trưởng nhóm thiện nguyện", "25/10/2020", "18:30"));
-   }
+    }
 
     private void initRecyclerViewUser() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
