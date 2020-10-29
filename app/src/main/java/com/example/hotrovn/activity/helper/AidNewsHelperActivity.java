@@ -10,6 +10,7 @@ import com.example.hotrovn.activity.helper.fragments.InformationFragments;
 import com.example.hotrovn.activity.helper.fragments.MapsFragments;
 import com.example.hotrovn.databinding.ActivityAidNewsHelperBinding;
 import com.example.hotrovn.model.City;
+import com.example.hotrovn.model.Province;
 import com.example.hotrovn.utilities.BaseActivity;
 import com.example.hotrovn.R;
 import com.example.hotrovn.utilities.HandingJson;
@@ -54,22 +55,23 @@ public class AidNewsHelperActivity extends BaseActivity {
         Dialog dialog = new Dialog(this);
         showDialog(dialog, R.layout.picker_location, R.drawable.custom_ll_aid_news, R.id.bt_save);
 
-        String[] data = {"A", "B", "C", "D", "E", "F", "G", "H", "I"};
+        String[] data = getList();
 
         handingNumberPicker((NumberPicker) dialog.findViewById(R.id.number_picker), data);
         dialog.show();
     }
 
-//    List<City> provinces;
-//    private String[] getList() {
-//        provinces = new ArrayList<>();
-//        provinces = HandingJson.getCountries(this);
-//        String[] stringsNameProvince = new String[provinces.size()];
-//        if(!provinces.isEmpty()) {
-//            for (int i = 0; i < provinces.size(); i++) {
-//                stringsNameProvince[i] = provinces.get(i).getName();
-//            }
-//        }
-//        return stringsNameProvince;
-//    };
+    City city;
+    private String[] getList() {
+        List<Province> provinces = new ArrayList<>();
+        city = HandingJson.getCountries(this);
+        provinces = city.getProvince();//get compoment
+        String[] stringsNameProvince = new String[provinces.size()];
+        if(!provinces.isEmpty()) {
+            for (int i = 0; i < provinces.size(); i++) {
+                stringsNameProvince[i] = provinces.get(i).getName();
+            }
+        }
+        return stringsNameProvince;
+    };
 }

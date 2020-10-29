@@ -43,6 +43,24 @@
           ]
         }
       ]
+    },
+    {
+      "Id" : 2,
+      "Name": "Hà Nam",
+      "Code": "HN",
+      "District": []
+    },
+    {
+      "Id" : 3,
+      "Name": "HCM",
+      "Code": "HN",
+      "District": []
+    },
+    {
+      "Id" : 4,
+      "Name": "Hà Tay",
+      "Code": "HN",
+      "District": []
     }
   ]
 }

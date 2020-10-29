@@ -98,7 +98,7 @@ public class BaseActivity extends AppCompatActivity {
         numberPicker.setMinValue(1);//vị trí nhỏ nhất
         numberPicker.setMaxValue(data.length);//vị trí lớn nhất
         numberPicker.setDisplayedValues(data);//lấy data
-        numberPicker.setValue(7);//vị trí chọn
+        numberPicker.setValue(1);//vị trí chọn
 
         // Set fading edge enabled
         numberPicker.setFadingEdgeEnabled(true);
