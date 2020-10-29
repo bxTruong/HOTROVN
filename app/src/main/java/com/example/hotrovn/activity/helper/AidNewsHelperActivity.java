@@ -1,32 +1,35 @@
 package com.example.hotrovn.activity.helper;
 
+import android.app.Dialog;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.databinding.DataBindingUtil;
 
 import com.example.hotrovn.activity.helper.fragments.InformationFragments;
 import com.example.hotrovn.activity.helper.fragments.MapsFragments;
-import com.example.hotrovn.databinding.ActivityAidInformationBinding;
 import com.example.hotrovn.databinding.ActivityAidNewsHelperBinding;
-import com.example.hotrovn.model.ObjectItem;
+import com.example.hotrovn.model.City;
 import com.example.hotrovn.utilities.BaseActivity;
 import com.example.hotrovn.R;
-import com.example.hotrovn.utilities.adapter.AidInformation2Adapter;
-import com.example.hotrovn.utilities.adapter.AidInformationAdapter;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.example.hotrovn.utilities.HandingJson;
+import com.shawnlin.numberpicker.NumberPicker;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class AidNewsHelperActivity extends BaseActivity {
+    ActivityAidNewsHelperBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aid_news_helper);
 
         moveFragments_AidNews(R.id.frm_informationAid, new InformationFragments());
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_aid_news_helper);
     }
 
     public void moveMaps(View v) {
@@ -38,7 +41,35 @@ public class AidNewsHelperActivity extends BaseActivity {
     }
 
     public void search(View v) {
-        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
-        showBottomSheetDialog_AidNewsHelper(bottomSheetDialog, R.layout.dialogs_bottomsheet_aid_news_helper, R.id.bottomSheetContainer, R.id.img_close);
+        binding.content.setVisibility(View.GONE);
+        binding.bottomSheetDialog.setVisibility(View.VISIBLE);
     }
+
+    public void loc(View v) {
+        binding.content.setVisibility(View.VISIBLE);
+        binding.bottomSheetDialog.setVisibility(View.GONE);
+    }
+
+    public void provincial(View v) {
+        Dialog dialog = new Dialog(this);
+        showDialog(dialog, R.layout.picker_location, R.drawable.custom_ll_aid_news, R.id.bt_save);
+
+        String[] data = {"A", "B", "C", "D", "E", "F", "G", "H", "I"};
+
+        handingNumberPicker((NumberPicker) dialog.findViewById(R.id.number_picker), data);
+        dialog.show();
+    }
+
+//    List<City> provinces;
+//    private String[] getList() {
+//        provinces = new ArrayList<>();
+//        provinces = HandingJson.getCountries(this);
+//        String[] stringsNameProvince = new String[provinces.size()];
+//        if(!provinces.isEmpty()) {
+//            for (int i = 0; i < provinces.size(); i++) {
+//                stringsNameProvince[i] = provinces.get(i).getName();
+//            }
+//        }
+//        return stringsNameProvince;
+//    };
 }

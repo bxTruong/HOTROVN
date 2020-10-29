@@ -42,4 +42,9 @@ public class AidInformationHelper extends BaseActivity {
     public void moveAidBattle(View v) {
         moveScreen_All(this, AidBattle.class);
     }
+
+    public void finishbt(View v)
+    {
+        finish();
+    }
 }

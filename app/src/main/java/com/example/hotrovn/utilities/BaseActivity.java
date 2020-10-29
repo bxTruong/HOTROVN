@@ -4,12 +4,10 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -17,13 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.hotrovn.R;
-import com.example.hotrovn.activity.AidNews;
-import com.example.hotrovn.activity.ConfirmPhoneNumber;
-import com.example.hotrovn.activity.helper.AidNewsHelperActivity;
-import com.example.hotrovn.activity.helper.fragments.MapsFragments;
-import com.example.hotrovn.utilities.adapter.AidNewsAdapter;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.shawnlin.numberpicker.NumberPicker;
 
 public class BaseActivity extends AppCompatActivity {
     public void moveScreen_All(Context context, Class classs) {
@@ -84,20 +76,40 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
-    public void showBottomSheetDialog_AidNewsHelper(final BottomSheetDialog bottomSheetDialog, int dialog, int idDialog, int close) {
-        View bottomSheetView = LayoutInflater.from(getApplicationContext())
-                .inflate(dialog,
-                        (ViewGroup) findViewById(idDialog)
-                );
+    public void showDialog(final Dialog dialog, int layoutDialog, int customDialog, int bt) {
+        dialog.setContentView(layoutDialog);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialog.getWindow().setBackgroundDrawable(getDrawable(customDialog));
+        }
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
 
-        bottomSheetView.findViewById(close).setOnClickListener(new View.OnClickListener() {
+        Button save = dialog.findViewById(bt);
+
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bottomSheetDialog.dismiss();
+                dialog.dismiss();
             }
         });
+    }
 
-        bottomSheetDialog.setContentView(bottomSheetView);
-        bottomSheetDialog.show();
+    public void handingNumberPicker(NumberPicker numberPicker, String[] data) {
+        numberPicker.setMinValue(1);//vị trí nhỏ nhất
+        numberPicker.setMaxValue(data.length);//vị trí lớn nhất
+        numberPicker.setDisplayedValues(data);//lấy data
+        numberPicker.setValue(7);//vị trí chọn
+
+        // Set fading edge enabled
+        numberPicker.setFadingEdgeEnabled(true);
+
+        // Set scroller enabled
+        numberPicker.setScrollerEnabled(true);
+
+        // Set wrap selector wheel
+        numberPicker.setWrapSelectorWheel(true);
+
+        // Set accessibility description enabled
+        numberPicker.setAccessibilityDescriptionEnabled(true);
     }
 }

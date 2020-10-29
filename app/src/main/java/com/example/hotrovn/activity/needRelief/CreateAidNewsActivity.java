@@ -29,4 +29,9 @@ public class CreateAidNewsActivity extends BaseActivity {
     public void showDialog(View v) {
         dialog.show();
     }
+
+    public void finishbt(View v)
+    {
+        finish();
+    }
 }

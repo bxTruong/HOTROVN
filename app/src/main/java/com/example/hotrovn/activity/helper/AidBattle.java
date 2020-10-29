@@ -19,10 +19,15 @@ public class AidBattle extends BaseActivity {
         setContentView(R.layout.activity_aid_battle);
 
         dialog = new Dialog(this);
-        showDialog_CreateAidNews(dialog, R.layout.dialogs_aid_battle, R.drawable.custom_ll_aid_news, R.id.bt_save, this, AidNewsHelperActivity.class);
+        showDialog_CreateAidNews(dialog, R.layout.dialogs_aid_battle, R.drawable.custom_ll_aid_news, R.id.bt_save, this, AidInformationHelper.class);
     }
 
     public void showDialog(View v) {
         dialog.show();
+    }
+
+    public void finishbt(View v)
+    {
+        finish();
     }
 }
